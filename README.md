@@ -3,8 +3,8 @@ Os serviços da aws foram configuradas corretamente, onde foi criada a instânci
 Seguindo os sequintes requisitos para o linux
 
 <ul>
-  <h3>Configurar o NFS entregue;</h3>
- </ul>
+  <h3>Configurar o NFS entregue</h3>
+</ul>
 
 
 
