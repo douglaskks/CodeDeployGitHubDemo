@@ -1,0 +1,11 @@
+[Unit]
+Description=Confirmacao
+
+[Service]
+Type=simple
+ExecStart-/tmp/CodeDeployGitHubDemo/validacao.sh
+Restart=on-failure
+RestartSec=3
+
+[install]
+WantedBy=multi-user.target
