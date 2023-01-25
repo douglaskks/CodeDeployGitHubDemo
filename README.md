@@ -6,7 +6,16 @@ Seguindo os sequintes requisitos para o linux
   <h3>Configurar o NFS entregue</h3>
   
   <h5> Onde foi criado um diretório para que os arquivos possam ser armazenados na pasta através do<br>
-       usuário root com o comando mkdir <i>/montagem/nfs<i>
+       usuário root com os comandos:
+    
+          <i>mkdir /montagem/nfs<i>
+            
+          <h3>Para montar </h3>
+            <i>mount <b>ip_ou_dns_do_nfs</b>:/ /montagem/nfs
+          <br> 
+          <h3>para verificar se funcionou</h3>
+          <i>df -h </i>    
+      
 </ul>
 
 
