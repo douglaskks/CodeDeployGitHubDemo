@@ -53,3 +53,13 @@ Seguindo os sequintes requisitos para o linux
 <h3> Irá mostrar as informações atuais do seervidor Hora atual, Data atual e seu status, caso estiver online exibirá a mensagem<br>
      <i>"apache_httpd online"</i> caso offline <i>"apache_httpd offline"</i> 
   
+  
+ <h2> Referências: <h2> 
+ <h4> Amazon Web Services <h4>
+ https://docs.aws.amazon.com/pt_br/index.html
+   
+ <h4> Apache2 <h4>
+ https://httpd.apache.org/docs/trunk/pt-br/
+   
+ <h4> NFS Debian <h4>
+ https://debian-handbook.info/browse/pt-BR/stable/sect.nfs-file-server.html
