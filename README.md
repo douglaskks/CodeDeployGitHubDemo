@@ -31,5 +31,25 @@ Seguindo os sequintes requisitos para o linux
       
    <h3>Criar Scripts que validem se o serviço está online ou não</h3>
       <h4> Primeiro script executável <h4>
-        <code> 
+        <code>  #!/bin/bash<br>
+                #<br>
+                #Verificação do status de serviço do apache com httpd para o diretorio montagem/nfs/DouglasHenrique<br>
+<br>
+<br>
+<br>
+                HORA_ATUAL=$(date +%H:%M:%S)<br>
+                DATA_ATUAL=$(date +%d/%m/%Y)<br>
+                SERVICO="apache_httpd"<br>
+                STATUS=$(systemctl is-active $SERVICO)<br>
+<br>
+<br>
+                if [ $STATUS == "active" ]; then<br>
+                  MENSAGEM="$SERVICO online"<br>
+                  echo "$HORA $DATA - active - $MENSAGEM" >> /montagem/nfs/DouglasHenrique/validacaoOnline.txt<br>
+                else<br>
+                  MENSAGEM="$SERVICO offline"<br>
+                  echo "$HORA $DATA - $SERVICO - inactive - $MENSAGEM" >> /montagem/nfs/DouglasHenrique/validacaoOffline.txt<br>
+                fi</code><br>
+<h3> Irá mostrar as informações atuais do seervidor Hora atual, Data atual e seu status, caso estiver online exibirá a mensagem<br>
+     <i>"apache_httpd online"</i> caso offline <i>"apache_httpd offline"</i> 
   
