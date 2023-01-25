@@ -7,9 +7,29 @@ Seguindo os sequintes requisitos para o linux
   <h5> Onde foi criado um diretório para que os arquivos possam ser armazenados na pasta através do<br>
        usuário root com os comandos:<h5>
     
-        <i>mkdir /montagem/nfs</i>
+  <i>mkdir /montagem/nfs</i>
             
-        Para montar
-          mount <b>ip_ou_dns_do_nfs</b>:/ /montagem/nfs
-        para verificar se funcionou
-        df -h
+  <h5>Para montar<h5>
+    <i>mount <b>ip_ou_dns_do_nfs</b>:/ /montagem/nfs</i>
+  
+  <h5>para verificar se funcionou<h5>
+    <i>df -h</i>
+
+  <h5>A dicionar a seguinte opção para iniciar o nfs no boot<h5><br>
+    <i>Vá em <b>/etc/fstab<b></i><br>
+    <i><b>ip_ou_dns_do_nfs</b>:/ /mnt/nfs nfs defaults 0 0</i><br>
+    <i>:wq</i> para salvar<br>
+    <i> Criar um novo diretório com seu nome (DouglasHenrique) no caminho /montagem/nfs/Nome_participante</i><br>
+      
+   <h3>Configurar o Apache2 no servidor</h3>
+      <i> Sequência: </i><br>
+      <i>yum update -y</i><br>
+      <i>yum install httpd</i> e confirma<br>
+      <i>systemctl start httpd</i><br>
+      <i>systemctl enable httpd</i><br>
+      <i>systemctl status httpd</i><br>
+      
+   <h3>Criar Scripts que validem se o serviço está online ou não</h3>
+      <h4> Primeiro script executável <h4>
+        <code> 
+  
