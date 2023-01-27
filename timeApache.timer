@@ -1,0 +1,10 @@
+[Unit]
+Description=Confirmar o tempo do apache
+
+[Timer]
+OnUnitActiveSec=5min
+OnBootsec=5min
+Unit=timeApache.service
+
+[install]
+WantedBy=multi-user.target
