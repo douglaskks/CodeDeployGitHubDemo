@@ -29,27 +29,29 @@ Seguindo os sequintes requisitos para o linux
       <i>systemctl enable httpd</i><br>
       <i>systemctl status httpd</i><br>
       
-   <h3>Criar Scripts que validem se o serviço está online ou não</h3>
-      <h4> Primeiro script executável <h4>
-        <code>  #!/bin/bash<br>
-                #<br>
-                #Verificação do status de serviço do apache com httpd para o diretorio montagem/nfs/DouglasHenrique<br>
-<br>
-<br>
-<br>
-                HORA_ATUAL=$(date +%H:%M:%S)<br>
-                DATA_ATUAL=$(date +%d/%m/%Y)<br>
-                SERVICO="apache_httpd"<br>
-                STATUS=$(systemctl is-active $SERVICO)<br>
-<br>
-<br>
-                if [ $STATUS == "active" ]; then<br>
-                  MENSAGEM="$SERVICO online"<br>
-                  echo "$HORA $DATA - active - $MENSAGEM" >> /montagem/nfs/DouglasHenrique/validacaoOnline.txt<br>
-                else<br>
-                  MENSAGEM="$SERVICO offline"<br>
-                  echo "$HORA $DATA - $SERVICO - inactive - $MENSAGEM" >> /montagem/nfs/DouglasHenrique/validacaoOffline.txt<br>
-                fi</code><br>
+Criar Scripts que validem se o serviço está online ou não
+Primeiro script executável:
+
+
+                        #!/bin/bash
+                        #
+                        #Verificação do status de serviço do apache com httpd para o diretorio montagem/nfs/DouglasHenrique
+
+                        HORA_ATUAL=$(date +%H:%M:%S)
+                        DATA_ATUAL=$(date +%d/%m/%Y)
+                        SERVICO="apache_httpd"
+                        STATUS=$(systemctl is-active $SERVICO)
+
+
+                        if [ $STATUS == "active" ]; then
+                          MENSAGEM="$SERVICO online"
+                          echo "$HORA $DATA - active - $MENSAGEM" >> /montagem/nfs/DouglasHenrique/validacaoOnline.txt
+                        else
+                          MENSAGEM="$SERVICO offline"
+                          echo "$HORA $DATA - $SERVICO - inactive - $MENSAGEM" >> /montagem/nfs/DouglasHenrique/validacaoOffline.txt
+                        fi
+                        
+                        
 <h3> Irá mostrar as informações atuais do seervidor Hora atual, Data atual e seu status, caso estiver online exibirá a mensagem<br>
      <i>"apache_httpd online"</i> caso offline <i>"apache_httpd offline"</i> 
   
