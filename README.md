@@ -2,7 +2,6 @@ Os serviços da aws foram configuradas corretamente, onde foi criada a instânci
 
 Seguindo os sequintes requisitos para o linux
 
-  <h3>Configurar o NFS entregue</h3>
   
   <h5> Onde foi criado um diretório para que os arquivos possam ser armazenados na pasta através do<br>
        usuário root com os comandos:<h5>
